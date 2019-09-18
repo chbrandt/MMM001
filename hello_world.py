@@ -1,10 +1,7 @@
 import sys
 
-def make_upper(word):
-    return word.upper()
-
 def greet_user(name):
-    return "Hello {}!".format(make_upper(name))
+    return "Hello {}!".format(name.upper())
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
@@ -12,4 +9,3 @@ if __name__ == "__main__":
     else:
         res = greet_user(sys.argv[1])
         print(res)
-
