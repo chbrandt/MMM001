@@ -124,3 +124,42 @@ tailor of all birds"?
 >>> import string
 >>> string.capwords(text)
 ```
+
+
+### Coderbyte Question-Marks
+
+Exercise https://www.coderbyte.com/editor/Questions%20Marks:Python .
+
+```python
+def QuestionsMarks(string):
+  prev_num = None
+  marks = 0
+  for s in string:
+    try:
+      num = int(s)
+      if prev_num is None:
+        prev_num = num
+        continue
+      else:
+        if prev_num + num <= 10:
+          if marks == 3:
+            return 'true'
+          else:
+            prev_num = num
+            marks = 0
+            continue
+        else:
+          prev_num = num
+          marks = 0
+          continure
+    except:
+      if s == '?' and prev_num:
+        marks += 1
+        continue
+      else:
+        continue
+  return 'false'
+
+# keep this function call here
+print QuestionsMarks(raw_input())
+```
