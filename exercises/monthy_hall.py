@@ -72,9 +72,10 @@ def should_change():
 N_PRIZES = 0
 N_LOSTS = 0
 
+import random
 for i in range(N_SIMULATIONS):
-    doors = generate_doors()
-    chosen_door = pick_one()
+    prize_door = random.randint(0,2)
+    chosen_door = random.randint(0,2)
     remove_door = remove_one(doors, chosen_door)
     doors[remove_door] = False
     if should_change():

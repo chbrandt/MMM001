@@ -84,3 +84,43 @@ class Point(object):
     def __repr__(self):
         return "Point({x},{y})".format(x=self.x, y=self.y)
 ```
+
+
+### Text cleaning
+The text:
+```
+Did you know...
+... that the first discovered fossil of the dinosaur Weewarrasaurus was noted for
+being preserved in green-blue opal?
+... that the golden-headed cisticola (pictured) has been described as the "finest
+tailor of all birds"?
+... that the rhythm of the call of the fulvous owl has been likened to Morse code?
+```
+
+* Substitute -- replace -- all occurrences of "..." into ":".
+```python
+>>> text.replace('...',':')
+```
+
+* Remove all newline/line-break characters ("\n") so the text becomes in a single line.
+```python
+>>> text.replace('\n','')
+```
+
+* Substitute the first "..." into a ":", and the others "..." (at the beginning of lines) into a "*" bullet; And remove blank lines.
+```python
+>>> import re
+>>> for line in text.split('\n'):
+...     line = line.strip()
+...     line = re.sub('\.\.\.$',':',line)
+...     line = re.sub('^\.\.\.','*',line)
+...     if not line:
+...         continue
+...     print(line)
+```
+
+* Substitute all first characters (of every word) to upper-case.
+```python
+>>> import string
+>>> string.capwords(text)
+```
