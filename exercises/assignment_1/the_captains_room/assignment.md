@@ -1,12 +1,13 @@
 ## The Captain's Room
-* from [Hackerrank](https://www.hackerrank.com/challenges/py-the-captains-room/problem)
+* from Hackerrank:
+    * https://www.hackerrank.com/challenges/py-the-captains-room/problem
 
 Mr. Anant Asankhya is the manager at the INFINITE hotel. The hotel has an infinite amount of rooms.
 
 One fine day, a finite number of tourists come to stay at the hotel.
 The tourists consist of:
-→ A Captain.
-→ An unknown group of families consisting of $K$ members per group where $K \neq 1$.
+* A Captain.
+* An unknown group of families consisting of $K$ members per group where $K \neq 1$.
 
 _The Captain was given a separate room, and the rest were given one room per group._
 
