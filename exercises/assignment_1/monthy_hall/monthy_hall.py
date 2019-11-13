@@ -1,5 +1,5 @@
 '''
-The Captain's room
+Monthy-Hall
 
 Notes:
 * <any notes about the problem>
@@ -11,14 +11,12 @@ author = '<your-name-here>'
 # you feel is useful to implement the solution can be done/defined here.
 
 
-def run(K, rooms):
+def run(should_change):
     '''
-    Return the Captain's room number
+    Return the statistic of finding the prize when door change or not
 
-    * K: integer
-        number of tourists in each group
-    * rooms: list of integers
-        room number of each tourist
+    * should_change: boolean
+        whether the player should change or not the door
     '''
     output = None
 
